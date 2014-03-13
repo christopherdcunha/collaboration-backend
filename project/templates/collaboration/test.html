@@ -2,13 +2,13 @@
 
 <script src="/static/js/socket.io.js"></script>
 <script>
-  var socket = io.connect('/chat');
+  var socket = io.connect('/project');
 
-  socket.on('chat', function (data) {
+  socket.on('test', function (data) {
     console.log(data);
   });
 
-  socket.emit('chat', { my: 'data' });
+  socket.emit('test', { my: 'data' });
 </script>
 
 <!DOCTYPE html>

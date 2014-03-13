@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Projects</title>
+</head>
+<body>
+<table>
+    {% for project in projects %}
+        <tr>
+            <td><a href="{% url 'detail_project' slug=project.name %}">Name: {{project.name}}</a></td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="/project/create/"> Add project</a>
+</body>
+</html>

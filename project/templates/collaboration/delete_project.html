@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Projects</title>
+</head>
+<body>
+<form action="{% url 'delete_project' slug=name %}" method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ name }}"?</p>
+    <input type="submit" value="Delete project" />
+</form>
+</body>
+</html>

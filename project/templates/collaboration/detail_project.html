@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Project {{project.name}}</title>
+</head>
+<body>
+<h2>Project name: </h2>{{project.name}}
+<a href="{% url 'delete_project' slug=project.name %}">Delete project</a>
+<table>
+    <h2>Project Jobs</h2>
+    <!--{% for job in project.jobs %}-->
+        <!--<tr>-->
+            <!--<td>Name of job: {{job.name}}</td>-->
+        <!--</tr>-->
+    <!--{% endfor %}-->
+</table>
+<a href="{% url 'create_project' slug=project.name"> Add job</a>
+</body>
+</html>

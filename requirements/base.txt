@@ -1,2 +1,3 @@
 django
 gevent-socketio
+django-tastypie

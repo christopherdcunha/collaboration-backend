@@ -59,5 +59,6 @@ urlpatterns = patterns('',
         r'^socket\.io/',
         include('collaboration.urls')
     ),
+    url(r'^api/', include('api.urls')),
 )
 urlpatterns += staticfiles_urlpatterns()

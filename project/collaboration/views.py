@@ -8,6 +8,7 @@ from models import Project, Job
 from django.core.urlresolvers import reverse, reverse_lazy
 import logging
 from django.shortcuts import render_to_response
+from collaboration.sockets import ProjectNamespace
 
 
 @namespace('/chat')
@@ -92,7 +93,7 @@ def socketio(request):
     '''main notification view'''
     socketio_manage(
         request.environ,
-        {'/chat': ChatNamespace},
+        {'/project': ProjectNamespace},
         request
     )
 

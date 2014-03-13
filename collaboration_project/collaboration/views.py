@@ -15,3 +15,10 @@ def socketio(request):
         {'/chat': ChatNamespace},
         request
     )
+
+
+def test(request):
+    render(
+        request,
+        'collaboration/test.html'
+    )

@@ -1,0 +1,20 @@
+{% load staticfiles %}
+
+<script src="{% static js/socket.io.js %}"></script>
+<script>
+  var socket = io.connect('http://localhost');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CHRISTOPHERD - SOCKET.IO TEST</title>
+</head>
+<body>
+CHRISTOPHERD - SOCKET.IO TEST
+</body>
+</html>

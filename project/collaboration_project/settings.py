@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'collaboration',
+    'simple_audit',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -46,6 +47,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'simple_audit.middleware.TrackingRequestOnThreadLocalMiddleware',
 )
 
 ROOT_URLCONF = 'collaboration_project.urls'
@@ -121,3 +123,5 @@ LOGGING = {
         },
     },
 }
+
+DJANGO_SIMPLE_AUDIT_ACTIVATED = True

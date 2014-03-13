@@ -1,3 +1,4 @@
 django
 gevent-socketio
 django-tastypie
+django-simple-audit

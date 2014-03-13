@@ -7,6 +7,9 @@
   socket.on('test', function (data) {
     console.log(data);
   });
+  socket.on('project', function (data) {
+    console.log(data);
+  });
 
   socket.emit('test', { my: 'data' });
 </script>

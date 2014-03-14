@@ -1,4 +1,5 @@
 -r base.txt
 
 psycopg2
+psycogreen
 django-redis-cache

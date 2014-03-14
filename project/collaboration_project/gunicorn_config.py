@@ -7,7 +7,7 @@ def max_workers():
 
 bind = '0.0.0.0:8001'
 max_requests = 10000
-worker_class = 'gevent'
+worker_class = 'socketio.sgunicorn.GeventSocketIOWorker'
 workers = max_workers()
 
 
